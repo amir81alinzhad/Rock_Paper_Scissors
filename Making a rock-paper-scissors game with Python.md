@@ -25,26 +25,26 @@ Game_sets=int(input('how many rounds do you want play? '))
 ## Making a loop with the game set condition
 We put the terms of the game inside the loop
 ```python
-while set_bazi>0:
+while Game_sets>0:
     your_choice=input('enter your choice: ')
-    bazi=['sang','kaqaz','qeychi']
-    computer=random.choice(bazi)
+    game=['sang','kaqaz','qeychi']
+    computer=random.choice(game)
     computer_point=0
     you_point=0
-    if your_choice=='sang'and computer=='qeychi':
+    if your_choice=='Rock 'and computer=='Scissors':
         you_point+=1
-    if your_choice=='sang'and computer=='kaqaz':
+    if your_choice=='Rock'and computer=='Paper':
         computer_point+=1
-    if your_choice=='kaqaz'and computer=='sang':
+    if your_choice=='paper'and computer=='Rock':
         you_point+=1
-    if your_choice=='kaqaz'and computer=='qeychi':
+    if your_choice=='paper'and computer=='Scissors':
         computer_point+=1
-    if your_choice=='qeychi'and computer=='sang':
+    if your_choice=='Scissors'and computer=='Rock':
         computer_point+=1
-    if your_choice=='qeychi'and computer=='kaqaz':
+    if your_choice=='Scissors'and computer=='paper':
         you_point+=1
     print('you(',your_choice,')',  you_point,    'com(',computer,')', computer_point)
-    set_bazi-=1
+    Game_sets-=1
 ```
 Each time this loop is executed, one set is subtracted from the game
 ## Choose the winner of the game
